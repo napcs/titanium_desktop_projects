@@ -1,7 +1,11 @@
 $(function(){
   
+  // disable save by default.
   disableSave();
   
+  // disable save if there's nothing in the 
+  // editor to save. Excuse to show that
+  // jquery's keypres events work too
   $("#code_editor").keypress(function(){
     if($(this).val() == ""){
       disableSave();
@@ -11,8 +15,8 @@ $(function(){
   });  
   
 
-  
-  
+  // Event for clicking the load button
+  // Opens the load file button and loads the file
   $("#load").click(function(){
     var options = {  
        multiple: false,  
@@ -25,6 +29,8 @@ $(function(){
     
   });
   
+  // Event for clicking the save button - triggers the dialog and 
+  // saves file to the given location.
   $("#save").click(function(){
     var options = {  
        title: "Save file as...",  
@@ -55,12 +61,13 @@ saveFile = function(filenames){
   write_file(fileSelected, contents);
 };
 
+// Disables the save button
 disableSave = function(){
   $("#save").attr("disabled", "disabled");
   $("#save").addClass("disabled");
-  
 }
 
+// Enables the save button
 enableSave = function(){
   $("#save").removeAttr("disabled");
   $("#save").removeClass("disabled");
