@@ -1,4 +1,4 @@
-== My Titanium Desktop projects
+= My Titanium Desktop projects
 
 This repository contains various sample applications I've been using to learn Titanium Desktop. I hope to include both simple and complex examples.
 
@@ -6,7 +6,14 @@ This repository contains various sample applications I've been using to learn Ti
 
 Should just be able to load these up with Appcelerator Titanium and run/compile them.
 
+You'll need Appcelerator Titanium Developer from http://www.appcelerator.com/products/download/
+
+Install that, clone this repository, and import the projects. Use the Test and Package tab to see how these run.
+
+
 == License
+
+This is really a learning tool. Use this how you see fit. That said, it's MIT licensed.
 
 The MIT License
 
