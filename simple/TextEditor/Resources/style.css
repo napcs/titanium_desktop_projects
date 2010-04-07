@@ -1,0 +1,22 @@
+body{
+  background-color: #fff;
+  margin: 0; padding: 0;
+}
+
+header{
+  background-color: #AEAEAE;
+  display: block;
+  height: 40px;
+}
+
+nav input:first-child{margin-left:20px;}
+
+h1{margin: 0px; padding: 0px;}
+
+#code_editor{
+  border: 1px solid #000;
+  display:block;
+  width: 648px;
+  height: 400px;
+  margin: 0px auto;
+}

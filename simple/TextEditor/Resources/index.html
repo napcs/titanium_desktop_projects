@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TextEditor</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/ruby" src="ruby/file_io.rb"></script>
+    
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <header>
+      <h1>Text Editor</h1>
+    </header>
+    
+    <nav id="buttons">
+      <input type="button" id="load" value="Load">
+      <input type="button" id="save" value="Save">
+    </nav>
+
+    <form id="simpleform" method="post">  
+      <textarea id="code_editor" autofocus="true" placeholder="Your code should go here."></textarea>
+    </form>
+
+  </body>
+</html>
