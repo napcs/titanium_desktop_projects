@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Forms</title>
+    <script language="javascript" src="js/jquery.min.js"></script>
+    <script language="javascript" src="js/app.js"></script>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+  </head>
+  <body>
+    <h1>Simple forms</h1>
+
+    <form id="simpleform" method="post">
+          <fieldset id="signup">
+            <legend>Create New Account</legend>
+            <ol>
+              <li>
+                <label for="first_name">First Name</label>
+                <input id="first_name" type="text" 
+                       autofocus="true"
+                       name="first_name " placeholder="John">
+              </li>
+              <li>
+                <label for="last_name">Last Name</label>
+                <input id="last_name" type="text" name="last_name " placeholder="Smith">
+              </li>
+              <li>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="user@example.com">
+              </li>
+
+              <li><input type="submit" value="Sign Up"></li>
+            </ol>
+          </fieldset>  
+        </form>
+
+  </body>
+</html>
+  
