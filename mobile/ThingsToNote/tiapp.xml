@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>com.napcs.mobile.thingstonote</id>
+<name>ThingsToNote</name>
+<version>1.0</version>
+<publisher>New Auburn Personal Computer Services LLC</publisher>
+<url>http://www.napcs.com</url>
+<description>A simple note-taking application</description>
+<copyright>2010 by Brian P. Hogan</copyright>
+<icon>default_app_logo.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+<guid>08e749bb-deaf-4d00-bfee-bb9f25866609</guid>
+</ti:app>
