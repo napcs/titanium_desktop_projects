@@ -59,7 +59,7 @@ noteWin.add(txtBody);
 var btnSave = Titanium.UI.createButton({
 	title:'Save',
 	height:40,
-	width:100,
+	width:90,
 	top:280,
 	left: 10
 });
@@ -73,9 +73,9 @@ btnSave.addEventListener('click', function()
 var btnClose = Titanium.UI.createButton({
 	title:'Close',
 	height:40,
-	width:100,
+	width:90,
 	top:280,
-	left: 120
+	left: 110
 });
 
 noteWin.add(btnClose);
@@ -83,6 +83,24 @@ noteWin.add(btnClose);
 btnClose.addEventListener('click', function()
 {
 	noteWin.hide();
+});
+
+
+var btnDelete = Titanium.UI.createButton({
+	title:'Delete',
+	height:40,
+	width:90,
+	top:280,
+	left: 210
+});
+
+noteWin.add(btnDelete);
+
+btnDelete.addEventListener('click', function()
+{
+   deleteNote(btnSave.noteId);
+ 	 noteWin.hide();
+ 	 fetchNotes();
 });
 
 
@@ -163,6 +181,7 @@ var initForm = function(){
 	txtBody.value ="";
 	btnSave.noteId = null;
 	noteWin.show();
+	btnDelete.hide();
 }
 
 // Show the actual form
@@ -172,6 +191,11 @@ var showForm = function(id, title, body){
   txtTitle.value = title;
   btnSave.noteId = id;
   noteWin.show();
+  if(btnSave.noteId){
+    btnDelete.show();
+  }else{
+    btnDelete.hide();
+  }
 };
 
 
@@ -195,6 +219,17 @@ var updateNote = function(id, title, body){
  // messageBox(changed + " rows affected");
   db.close();
 }
+
+// Updates an existing record;
+var deleteNote = function(id){
+  var db = Titanium.Database.open(db_name);
+  db.execute("DELETE from notes WHERE id = ?",id )
+  changed = db.rowsAffected;
+ // messageBox(changed + " rows affected");
+  db.close();
+}
+
+
 
 var messageBox = function(msg){
   Titanium.UI.createAlertDialog({title:'Message', message: msg}).show();  
